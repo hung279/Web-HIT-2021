@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #ececec;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  height: 100vh;
+}
+
+.login-box {
+  background-color: #fff;
+  max-width: 380px;
+  padding: 28px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0 1px 2px #0005;
+}
+
+.login-box h2 {
+  font-weight: 500;
+  font-size: 28px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  color: rgb(168, 168, 168);
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.login-social {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.login-social a {
+  color: #000;
+  font-weight: 500;
+  display: block;
+  line-height: 34px;
+  border-radius: 8px;
+}
+
+.login-social a:hover {
+    color: #fff;
+    background-color: #dd4b39;
+}
+
+.login-social a,
+.group-input input {
+  border: 1px solid #0005;
+}
+
+.form-border {
+  height: 2px;
+  background-color: #ddd;
+}
+.login-form {
+  margin: 20px 0;
+}
+.group label {
+  font-weight: 500;
+}
+.group-input,
+.remember-pw {
+  margin: 10px 0 20px;
+}
+
+.group-input input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid #ccc;
+}
+
+.group-input input:focus {
+  border-color: #1a73e8;
+}
+
+.group-input {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: #ccc;
+}
+
+.fa-eye {
+  display: block;
+}
+
+.fa-eye-slash {
+  display: none;
+}
+
+.pw-show .active {
+  display: block;
+}
+
+.pw-show .non-active {
+  display: none;
+}
+
+.remember-pw {
+  display: flex;
+  align-items: center;
+}
+.remember-check {
+  height: 16px;
+  width: 16px;
+}
+
+.remember-pw label {
+  padding-left: 8px;
+  margin-top: -3px;
+}
+
+.submit-form {
+  text-align: center;
+}
+
+.submit-form button {
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  background-color: #1a73e8;
+  border: none;
+  line-height: 36px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.submit-form button:hover {
+    background-color: #0053be;
+}
+
+.submit-form a {
+  color: #1a73e8;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.submit-form a:hover {
+  color: #0053be;
+}
+
+.sign-up {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup-form {
+  font-weight: 500;
+  color: #1a73e8;
+  margin: 8px 0;
+}

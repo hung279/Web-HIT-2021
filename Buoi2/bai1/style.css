@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(167, 208, 255);
+}
+
+.container{
+    height: 100vh;
+}
+.card{
+    max-width: 400px;
+    background-color: #f1f1f1;
+    transform: translate(-50%, -50%);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px #4498f891;
+    overflow: hidden;
+}
+
+.card-image{
+    background-color: blue;
+}
+
+.card-image img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.card-content{
+    text-align: center;
+    padding: 36px;
+}
+.type-price{
+    background-color: rgba(117, 117, 117, 0.067);
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 24px 0 30px;
+    border-radius: 10px;
+}
+
+.icon {
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    background-color: #d5dbff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon .fa-music {
+    color: #727993;
+}
+
+p {
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+.card-content > p {
+    margin: 16px 0;
+}
+
+.description{
+    margin-left: -48px;
+}
+.change a{
+    color: #1d20cd;
+    font-weight: 700;
+}
+
+.btn-card {
+
+}
+.submit{
+    display: block;
+    background-color: #382ae1;
+    text-decoration: none;
+    line-height: 48px;
+    border-radius: 10px;
+    font-weight: 700;
+    color: #fff;
+    margin: 28px 0;
+    box-shadow: 0 12px 10px rgb(66 48 246 / 0.2);
+    transition: 0.3s;
+}
+
+.submit:hover {
+    transform: scale(1.03);
+}
+
+.cancel{
+    text-decoration: none;
+    font-weight: 700;
+    color: rgb(151, 151, 151);
+    transition: 0.3s;
+}
+
+.cancel:hover {
+    color: #000;
+}

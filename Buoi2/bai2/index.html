@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in Fake</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggle() {
+            let password = document.getElementById('password');
+            if(password.type === 'password') {
+                password.type = 'text';
+                document.querySelector('.password-toggle').classList.add('pw-show');
+            } else if (password.type === 'text') {
+                password.type = 'password';
+                document.querySelector('.password-toggle').classList.remove('pw-show');
+            }
+        }
+        function closeForm() {
+            alert('Không thoát được đâu anh!!!');
+        }
+        function submitForm() {
+            alert('Đăng nhập thất bại!');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>Log in</h2>
+            <div class="close" onclick="closeForm()">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="login-social">
+                <a href="">
+                    <i class="fab fa-google"></i>
+                    Login in with Google
+                </a>
+            </div>
+            <div class="form-border"></div>
+            <form class="login-form">
+                <div class="group">
+                    <label for="email">Email</label>
+                    <div class="group-input">
+                        <input type="email" name="username" id="email" placeholder="hunhun@hithaui.com" autofocus required>
+                    </div>
+                </div>
+                <div class="group">
+                    <label for="password">Password</label>
+                    <div class="group-input">
+                        <input type="password" name="password" class="input-pw" id="password" placeholder="Password" required>
+                        <div class="password-toggle" onclick="toggle()">
+                            <i class="non-active fas fa-eye"></i>
+                            <i class="active fas fa-eye-slash"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="remember-pw">
+                    <input type="checkbox" id="checked" class="remember-check">
+                    <label for="checked"> Remember me</label>
+                </div>
+                <div class="submit-form">
+                    <button onclick="submitForm()">Log in</button>
+                    <a href="">Forgot Password?</a>
+                </div>
+            </form>
+            <div class="form-border"></div>
+            <div class="sign-up">
+                <p>Don't have an account?</p>
+                <a href="" class="signup-form">Sign up</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
