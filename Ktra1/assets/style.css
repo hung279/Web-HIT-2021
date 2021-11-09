@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+input, select {
+    width: 100%;
+    padding: 4px 8px;
+}
+
+
+.header-bg img {
+    width: 100%;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: #66FFCC;
+}
+
+.sub-nav {
+  display: none;
+  background-color: #66FFCC;
+  width: 310px;
+  position: absolute;
+}
+
+.nav-menu li a {
+    color: #fff;
+    font-weight: 600;
+  display: block;
+  padding: 12px 34px;
+  text-transform: uppercase;
+}
+
+.nav-menu li a:hover {
+    background-color: #FFCCCC;
+}
+
+.sub-menu:hover .sub-nav{
+    display: block;
+}
+
+#container {
+    display: flex;
+}
+
+#container>.content {
+    width: 60%;
+}
+
+.product-wrap .title,
+.search-area .title,
+.sidebar-item .title {
+    padding: 8px 12px 16px;
+    margin-bottom: 8px;
+    background-color: #185fb7;
+    color: #fff;
+    font-weight: 500;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    width: 33.33333%;
+    margin-bottom: 20px;
+}
+
+.box {
+    padding: 0 8px
+}
+
+.product-content {
+    text-align: center;
+}
+
+.product-content h4,
+.product-content p {
+    color: #330066;
+}
+
+.product-content strike {
+    color: rgba(112, 0, 0);
+}
+
+.product-img {
+    height: 220px;
+    text-align: center;
+    border: 1px solid #0005;
+    border-radius: 5px;
+}
+
+.product-img img {
+    height: 100%;
+}
+
+.sidebar {
+    width: 40%;
+    display: flex;
+}
+
+
+form .input-search,
+form .select-product,
+.select-product select {
+    margin-bottom: 8px;
+}
+
+.btn-search {
+    text-align: center;
+}
+
+.btn-search button {
+    padding: 4px 8px;
+}
+.video-search,
+.sidebar-another {
+    padding: 0 8px;
+}
+
+.sidebar-item {
+    border: 2px solid #fa247f;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.sidebar-item .title {
+    background-color: #fa247f;
+    text-align: center;
+}
+
+.price {
+    text-align: center;
+    color: #fa247f;
+}
