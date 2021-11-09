@@ -116,6 +116,10 @@ input, select {
     display: flex;
 }
 
+.video-area {
+    background-color: #0005;
+    margin-bottom: 7px;
+}
 
 form .input-search,
 form .select-product,
@@ -150,4 +154,16 @@ form .select-product,
 .price {
     text-align: center;
     color: #fa247f;
+}
+
+.admin {
+    text-align: center;
+}
+
+.img-admin {
+    height: 30px;
+}
+
+.img-admin img {
+    height: 100%;
 }
