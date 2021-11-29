@@ -11,14 +11,14 @@ const case2 = " hOANG      BUI   hOang     ";
 
 const case3 = "23traN    dUOng23     ";
 
-const standardized = (str) => {
-    str = str.trim().toLowerCase();
-    str = str.replace(/\d/g, '');
-    str = str.replace(/\s+/g, ' ');
-    const newStr = str.split(' ').map(ele => {
-        return ele.charAt(0).toUpperCase()+ele.slice(1);
+function standardized(str) {
+    str = str.trim().toLowerCase();//xóa khoảng trắng, viết thường
+    str = str.replace(/\d/g, '');// xóa ký tự số
+    str = str.replace(/\s+/g, ' ');// xóa khoảng trắng ở giữa
+    str = str.split(' ').map(ele => {
+        return ele.charAt(0).toUpperCase()+ele.slice(1); //viết hoa chữ cái đầu sau khoảng trắng
     }).join(' ');
-    return newStr
+    return str;
 }
 console.log(standardized(case1));
 console.log(standardized(case2));

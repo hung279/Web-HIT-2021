@@ -15,29 +15,34 @@ const users = [
     { id: 4, name: "Minh Hoang", age: 15, gender: "male", money: 500 },
 ];
 
+
 function show(users) {
     users.forEach(element => {
         console.log(element);
     });
 }
 
+//thêm user
 function addUser(users, newUser) {
     users.push(newUser);
 }
 
+//Xóa user bằng id
 function deleteUserById(users, id) {
     let user = users.find((element) => {
         return element.id === id;
     });
     if(user === undefined) {
         console.log("ID delete is invalid");
-    } else {
-        users.splice(users.indexOf(user), 1);
-        console.log('Delete successful');
-        show(users);
+        return;
     }
+    users.splice(users.indexOf(user), 1);
+    console.log('Delete successful');
+    show(users);
+    
 }
 
+//sửa user qua id
 function updateUserByID(users, id) {
     const newUser = {id: id, name: 'Thanh Nien', age: 18, gender: 'male', money: 1000};
     let newUsers = [];
@@ -46,18 +51,19 @@ function updateUserByID(users, id) {
     });
     if(user === undefined) {
         console.log("ID update is invalid");
-    } else {
-        newUsers = users.map(element => {
-            if (element.id === id) {
-                element = newUser;
-            }
-            return element;
-        });
-        console.log('Update successful');
-        show(newUsers);
+        return;
     }
+    newUsers = users.map(element => {
+        if (element.id === id) {
+            element = newUser;
+        }
+        return element;
+    });
+    console.log('Update successful');
+    show(newUsers);
 }
 
+//Số lượng user là nam và trên 15 tuổi
 function countMaleAndOverAge15(users) {
     let listUsers = users.filter(element => {
         return element.gender = 'male' && element.age > 15;
@@ -65,6 +71,7 @@ function countMaleAndOverAge15(users) {
     console.log(`There are ${listUsers.length} people who are male and over 15 years old`);
 }
 
+//tổng tiền user có id chẵn
 function totalMoneyIDEven(users) {
     let totalMoney = users.reduce((pre, cur) => {
         return (cur.id % 2 == 0) ? pre+cur.money : pre;
@@ -72,6 +79,7 @@ function totalMoneyIDEven(users) {
     console.log(`Total of money's even ID: ${totalMoney}`);
 }
 
+//tìm người giàu nhất và nghèo nhất
 function isPoorAndRich(users) {
     let max = Math.max(...users.map(element => element.money));
     let min = Math.min(...users.map(element => element.money)); 
@@ -85,6 +93,7 @@ function isPoorAndRich(users) {
     })
 }
 
+//hoán đổi giới tính thành female
 function convertGender(users) {
     users.map(element => {
         element.gender = 'female';

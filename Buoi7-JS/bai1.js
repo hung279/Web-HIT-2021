@@ -17,8 +17,8 @@ const nums1 = [1, 1, 1, 10, 23, 2, 26, 26];
 const nums2 = [1000, 2000, 1000, 2000, 10000, 22222];
 
 function countNum(nums) {
-    let newNums = [...new Set(nums)];
-    let count = newNums.map(ele => {
+    let newNums = [...new Set(nums)]; //loại bỏ các số trùng nhau
+    let count = newNums.map(ele => {            //mảng số lần xuất hiện từng số
         return nums.filter(x => x === ele).length;
     });
     
