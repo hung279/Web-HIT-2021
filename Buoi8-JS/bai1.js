@@ -14,13 +14,17 @@ const str2 = "hitclubhiuhiu";
 const str3 = "aabb";
 
 const Pos = (str) => {
-    str = str.split('');
-    let map = {};
-    let arr = [];
-    for (const char of str) map[char] = map.hasOwnProperty(char) ? ++map[char] : 1;
+    // str = str.split('');
+    // let map = {};
+    // let arr = [];
+    // for (const char of str) map[char] = map.hasOwnProperty(char) ? ++map[char] : 1;
     
-    for (const key in map) arr.push(map[key]);
-    return arr.indexOf(1);
+    // for (const key in map) arr.push(map[key]);
+    // return arr.indexOf(1);
+    for (const i of str) {
+        if(str.indexOf(i) == str.lastIndexOf(i)) return i;
+    }
+    return -1;
 }
 
 console.log(Pos(str1));
