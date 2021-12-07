@@ -9,16 +9,13 @@ const digits2 = [0];
 // Output: [1,0]
 const digits3 = [9];
 
-const IntergerArr = (digits) => {
-    let numberStr = digits.reduce((pre, cur) => {
-        return pre + cur;
-    }, "");
-    let number = parseInt(numberStr)+1;
+const intergerArr = (digits) => {
+    let number = parseInt(digits.join(''))+1;
     return number.toString()
                 .split('')
                 .map(ele => +ele);
 }
 
-console.log(IntergerArr(digits1));
-console.log(IntergerArr(digits2));
-console.log(IntergerArr(digits3));
+console.log(intergerArr(digits1));
+console.log(intergerArr(digits2));
+console.log(intergerArr(digits3));
